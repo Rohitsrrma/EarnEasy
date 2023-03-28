@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/home_menu">
+
+    <fragment
+        android:id="@+id/home_menu"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+
+        <action
+            android:id="@+id/action_home_menu_to_history_menu"
+            app:destination="@id/history_menu" />
+
+        <action
+            android:id="@+id/action_home_menu_to_refer_menu"
+            app:destination="@id/refer_menu"
+            />
+    </fragment>
+
+      <fragment
+        android:id="@+id/history_menu"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" >
+
+          <action
+              android:id="@+id/action_history_menu_to_refer_menu"
+              app:destination="@id/refer_menu" />
+      </fragment>
+
+    <fragment
+        android:id="@+id/refer_menu"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.ReferEarnFragment"
+        android:label="Refer &amp; Earn"
+        tools:layout="@layout/fragment_refer_earn" >
+
+        <action
+            android:id="@+id/action_refer_menu_to_more_menu"
+            app:destination="@id/more_menu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/more_menu"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.MoreFragment"
+        android:label="More"
+        tools:layout="@layout/fragment_more" >
+
+        <action
+            android:id="@+id/action_more_menu_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_more_menu_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_more_menu_to_helpSupportFragment"
+            app:destination="@id/helpSupportFragment" />
+    </fragment>
+
+
+
+
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.PaymentFragment"
+        android:label="Payment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/helpSupportFragment"
+        android:name="com.example.earneasy.Fragments.MainActivityFragments.HelpSupportFragment"
+        android:label="Help &amp; Support"
+        tools:layout="@layout/fragment_help_support" />
+
+
+</navigation>

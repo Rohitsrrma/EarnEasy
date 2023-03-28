@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewoffer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="12dp">
+
+    <ImageView
+        android:id="@+id/backgroudthumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/gamezyoffer"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#742CDA"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/offerimagethumb"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+
+                android:src="@drawable/gamezy_logo" />
+
+            <TextView
+                android:id="@+id/offername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gamezy"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:layout_marginRight="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/RsSign"
+
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@+id/cardviewoffer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

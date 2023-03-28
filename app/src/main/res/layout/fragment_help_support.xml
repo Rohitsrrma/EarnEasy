@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragmentbackground"
+        tools:context=".Fragments.MainActivityFragments.HelpSupportFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundrecrefferal"
+                android:orientation="vertical">
+               <EditText
+                   android:layout_margin="10dp"
+                   android:hint="Type your query..."
+                   android:background="@color/white"
+           android:gravity="start"
+           android:layout_width="match_parent"
+           android:layout_height="150dp"/>
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:background="@drawable/roundpayment"
+                android:backgroundTint="@color/referbackground"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

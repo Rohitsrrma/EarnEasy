@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/fragmentbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HowDoesThisWork">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AppBarLayout"
+            android:background="@color/referbackground"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/backtoMainfromPayment"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/ic_backgroud"
+                    tools:ignore="ContentDescription"
+                    app:tint="@color/white" />
+
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How does it work?"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/AppBarLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@+id/AppBarLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How to earn?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp"
+                        android:background="@drawable/roundrecdownsideround"
+                        android:padding="10dp"
+                        android:text="@string/howtoearn"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How to refer?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundrecdownsideround"
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/howtorefer"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="whom to earn?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/roundrecdownsideround"
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/whomtorefer"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Whom to earn?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whomtorefer"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Why to refer?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whytorefer"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How to redeem reward amount?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/howtoredeemrewardamount"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How much amount we can redeem/withdrawalfrom reward amount?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/howmuchwithdraw"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I reffered my friends but did not see the reward amount increase?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ireferfrind"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Why I cannot see offers in my phone?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whynooffers"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How can we share our referral code?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/howcanshare"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Why my earning is on hold?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whyearningishold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="By when I can get my amount?"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/whenamountcome"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Do and Dont's to use app."
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp"
+                        android:backgroundTint="@color/referbackground"
+                        android:background="@drawable/roundrecupsideround" />
+
+                    <TextView
+                        android:padding="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dodonts"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:background="@drawable/roundrecdownsideround" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

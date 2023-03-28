@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EarnEasy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="RsSign">₹ 50</string>
+    <string name="howtoearn">User need to perform the available tasks, as per the instructions mentioned in the respective offer. Some offers ask for a deposit with gameplay, some offers asks deposit and purchase, some will ask for KYC, once the offer task will be completed, user will get the amount in EarnEasy “MY Account”, further one can redeem minimum amount of ₹50.</string>
+    <string name="howtorefer">Every user is provided by unique referral code to earn reward amount, which can be shared with family and friends to get EarnEasy app. User can share the unique referral code via EarnEasy app itself, it has option to share it via WhatsApp, Facebook, Telegram.</string>
+    <string name="whomtorefer">User can refer friends, family members or anyone who is an Android user. The referral will get a reward amount of ₹10 to refer 1 user, and gets addition ₹5 if the referee uses the application. The referee will also get ₹50 joining bonus. </string>
+    <string name="howtoredeemrewardamount">User has to bring the reward amount to minimum ₹200 to withdraw ₹50. Any reward amount above ₹200 can be redeemed with a minimum withdrawal amount of ₹50.
+</string>
+    <string name="howmuchwithdraw">Minimum Withdrawal amount is Rs 50. Any reward amount above Rs 200 can be redeemed/withdrawal. User need to refer more to earn more, there is no limit to earn reward amount, user can earn as much as he refers.
+</string>
+    <string name="howcanshare">User can share it on WhatsApp, Instagram, Telegram from the EarnEasy app itself. You can also copy the referral code and share it via other Social Media Platforms.</string>
+    <string name="whyearningishold">Our system keeps on checking fraudulent activities like use of restricted apps to get single offer multiple times. Payments related to those activities are put on hold by the system. Please avoid such activities for smooth app experience. You can reach us at feedback@earneasy.io for more clarity.</string>
+    <string name="whynooffers">The available offers on the EarnEasy app varies as per the users, there are multiple checks from our end. One of the possibilities could be, a device is not compatible to see the offers, or you might have been blocked etc. If the problem persists, please feel free to reach out to feedback@earneasy.io and we will get back to you at the earliest.</string>
+    <string name="whydididonotgetamount">User must have used the respective application earlier on the respective handset/Mobile. Amount is given to the first time or unique users only.</string>
+    <string name="ireferfrind">Referral must copy the exact referral code to be considered. User should share the referral code via EarnEasy app itself via WhatsApp, Facebook, Telegram.</string>
+    <string name="whytorefer">Every referral will get a reward amount of ₹10 and can get addition amount of ₹5, only if the referee uses the application. User must have minimum balance of ₹200 reward amount to redeem ₹50.</string>
+    <string name="whenamountcome">New user who performs the very first task, gets the amount instantly. For the rest of the offers, users get the reward and offer amount within 24 hours.</string>
+    <string name="dodonts">Do’s \n1.Follow the offer instruction carefully.
+\n2.Keep using the offer for minimum 7 days.
+\n3.Refer your unique referral code to your family and friends to increase your earnings.
+\nDon’t\n
+1.Do not use the same device to refer.\n
+2.Do not change the GAID id of your device.\n
+3.Do not change the device id of your phone.</string>
+</resources>
