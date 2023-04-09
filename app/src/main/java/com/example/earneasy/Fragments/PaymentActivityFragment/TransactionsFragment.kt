@@ -1,5 +1,6 @@
 package com.example.earneasy.Fragments.PaymentActivityFragment
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.earneasy.AdapterView.HistoryAdapter
 import com.example.earneasy.R
 import com.example.earneasy.TestData.TestData
+import com.example.earneasy.VIewModels.MainActivityViewModel
 import com.example.earneasy.databinding.FragmentTransactionsBinding
 
 
@@ -33,6 +35,7 @@ class TransactionsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var fContext: Context
+    private lateinit var mainViewModel : MainActivityViewModel
 
 
 
@@ -51,14 +54,18 @@ class TransactionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
          binding= DataBindingUtil.inflate(inflater, R.layout.fragment_transactions,container,false)
-
+        mainViewModel = MainActivityViewModel((fContext as Activity).application)
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        TestData.addtoHistoryList()
+
+
+        mainViewModel.getTransactionsList().observe(viewLifecycleOwner){
+
+        }
         val rv = binding.rvTransactions
         rv.adapter = HistoryAdapter(TestData.historyitemlist)
         rv.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.VERTICAL, false)

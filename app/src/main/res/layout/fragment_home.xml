@@ -9,6 +9,9 @@
 
     </data>
 
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,6 +33,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
             android:id="@+id/rvOffer"
+            android:nestedScrollingEnabled="false"
             android:orientation="horizontal"
             android:background="@color/fragmentbackground"
             app:layout_constraintTop_toBottomOf="@+id/ReferVP"
@@ -66,4 +70,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

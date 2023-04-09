@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/history_menu"
-        android:icon="@drawable/history"
+        android:icon="@drawable/history2"
         android:title="History"
         />
     <item

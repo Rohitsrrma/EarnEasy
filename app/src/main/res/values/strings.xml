@@ -24,4 +24,20 @@
 1.Do not use the same device to refer.\n
 2.Do not change the GAID id of your device.\n
 3.Do not change the device id of your phone.</string>
+
+    <string name="OfferExplainstep1">1. Click on the \'Get Offer\' button</string>
+    <string name="OfferExplainstep2">2. If you are new user - download and register on the app using your Mobile Number</string>
+    <string name="OfferExplainstep3">3. Now open the app and perform fewe taks to get Rs 20 guranteed</string>
+    <string name="sharetext">#EarnEasy: Earn Wallet Cash in 24hrs\n\n
+
+ New User Bonus Rs 50 on joining\n\n
+
+* Earn up to Rs 3000 every month\n\n
+
+Referral Code: nRjCcNfm\n\n
+
+Download now from Google Play store\n\n
+
+Click on the link below:\n\n
+https://play.google.com/store/apps/details?id=com.earneasy.app</string>
 </resources>

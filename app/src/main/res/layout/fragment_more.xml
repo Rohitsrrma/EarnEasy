@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="50dp"
+        android:padding="10dp"
         android:orientation="vertical"
         android:background="@color/fragmentbackground"
 
@@ -18,6 +18,8 @@
         tools:context=".Fragments.MainActivityFragments.MoreFragment">
 
         <!-- TODO: Update blank fragment layout -->
+
+
         <LinearLayout
             android:id="@+id/PaymentTabLL"
             android:background="@drawable/roundrecupsideround"
@@ -35,7 +37,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/payment"
+                    android:src="@drawable/wallet"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -67,7 +69,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/profile"
+                    android:src="@drawable/profle"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -204,6 +206,20 @@
                     android:text="Logout" />
             </LinearLayout>
         </LinearLayout>
+
+
+        <Button
+            android:onClick="dailyrewards"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daily Rewards"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/referbackground"/>
+
+
+
+
 
 
     </LinearLayout>

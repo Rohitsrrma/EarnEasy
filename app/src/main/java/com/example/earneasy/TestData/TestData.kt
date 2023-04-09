@@ -5,27 +5,6 @@ import com.example.earneasy.R
 class TestData {
     companion object {
         var offerList = mutableListOf<OfferDataModelClass>()
-
-        var notificationlist = mutableListOf<NotificationDataModelClass>()
-
-        var historyitemlist = mutableListOf<HistoryDataModelClass>()
-
-        fun addtoHistoryList(){
-            historyitemlist.add(HistoryDataModelClass("SignUP Bonus","12/02/2023","01:30 PM","50"))
-            historyitemlist.add(HistoryDataModelClass("App Install Bonus","12/02/2023","01:30 PM","10"))
-            historyitemlist.add(HistoryDataModelClass("Refferal Bonus","12/02/2023","01:30 PM","15"))
-            historyitemlist.add(HistoryDataModelClass("Earning Amount Withdrawn","12/02/2023","01:30 PM","100"))
-            historyitemlist.add(HistoryDataModelClass("Reward Amount Withdrawn","12/02/2023","01:30 PM","80"))
-        }
-
-        fun addtoNotificationList(){
-            notificationlist.add(NotificationDataModelClass("7889182324"))
-            notificationlist.add(NotificationDataModelClass("8283504335"))
-            notificationlist.add(NotificationDataModelClass("8657452435"))
-
-            notificationlist.add(NotificationDataModelClass("8872702002"))
-        }
-
         fun addtoOfferList() {
             offerList.add(
                 OfferDataModelClass(
@@ -56,6 +35,52 @@ class TestData {
                 )
             )
         }
+
+        var extraofferlist = mutableListOf<ExtraOfferDM>()
+        fun addtoExtraOfferList(){
+            extraofferlist.add(ExtraOfferDM(R.drawable.referpersonthree))
+            extraofferlist.add(ExtraOfferDM(R.drawable.gamezyoffer))
+            extraofferlist.add(ExtraOfferDM(R.drawable.referfriend))
+
+//            extraofferlist.add(ExtraOfferDM(1))
+//            extraofferlist.add(ExtraOfferDM(2))
+//            extraofferlist.add(ExtraOfferDM(3))
+        }
+
+        var notificationlist = mutableListOf<NotificationDataModelClass>()
+        fun addtoNotificationList(){
+            notificationlist.add(NotificationDataModelClass("7889182324"))
+            notificationlist.add(NotificationDataModelClass("8283504335"))
+            notificationlist.add(NotificationDataModelClass("8657452435"))
+
+            notificationlist.add(NotificationDataModelClass("8872702002"))
+        }
+
+        var historyitemlist = mutableListOf<HistoryDataModelClass>()
+        fun addtoHistoryList(){
+            historyitemlist.add(HistoryDataModelClass("- ₹50 #EarnEasy","12 Dec 2022 12:20 PM","Checked",R.drawable.checked))
+            historyitemlist.add(HistoryDataModelClass("- ₹50 #EarnEasy","1 Dec 2022 11:20 PM","Pending",R.drawable.pending))
+            historyitemlist.add(HistoryDataModelClass("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Checked",R.drawable.checked))
+            historyitemlist.add(HistoryDataModelClass("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Checked",R.drawable.checked))
+            historyitemlist.add(HistoryDataModelClass("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Pending",R.drawable.pending))
+        }
+
+        var transactionsList = mutableListOf<TransActionsDM>()
+
+        fun addtoTransactionsList(){
+
+            transactionsList.add(TransActionsDM("- ₹50 #EarnEasy","12 Dec 2022 12:20 PM","Checked",R.drawable.checked))
+            transactionsList.add(TransActionsDM("- ₹50 #EarnEasy","1 Dec 2022 11:20 PM","Pending",R.drawable.pending))
+            transactionsList.add(TransActionsDM("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Checked",R.drawable.checked))
+            transactionsList.add(TransActionsDM("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Checked",R.drawable.checked))
+            transactionsList.add(TransActionsDM("- ₹50 #EarnEasy","10 Dec 2022 1:20 AM","Pending",R.drawable.pending))
+
+        }
+
+
+
+
+
 
     }
 }

@@ -24,8 +24,10 @@
             </shape>
         </rotate>
     </item>
+
+
     <item
-        android:width="30dp"
+        android:width="12dp"
         android:height="60dp"
         android:left="40dp"
         android:top="0dp"
@@ -34,10 +36,13 @@
         <rotate
             android:fromDegrees="351"
             android:pivotX="100"
-            android:pivotY="-1810">
+            android:pivotY="-1960">
             <shape>
                 <solid android:color="@color/white" />
             </shape>
         </rotate>
     </item>
+
+
+
 </layer-list>

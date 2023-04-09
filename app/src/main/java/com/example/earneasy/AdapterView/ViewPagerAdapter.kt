@@ -14,46 +14,43 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.earneasy.Fragments.MainActivityFragments.ReferEarnFragment
 import com.example.earneasy.MainActivity
 import com.example.earneasy.R
+import com.example.earneasy.R.id
+import com.example.earneasy.TestData.ExtraOfferDM
 
 
-class ViewPagerAdapter(val ctx: Context) : RecyclerView.Adapter<ViewPagerAdapter.Holder>() {
-    protected var itemClickListener: ItemClickListener?=null
+class ViewPagerAdapter(val ctx: Context, val list: MutableList<ExtraOfferDM>) : RecyclerView.Adapter<ViewPagerAdapter.Holder>() {
 
-    class Holder(item : View): ViewHolder(item) {
-        val ViewPagerIV = item.findViewById<ImageView>(com.example.earneasy.R.id.viewpagerreferfriendImageView)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(parent.context).inflate(com.example.earneasy.R.layout.viewpager2imageview,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.viewpager2imageview,parent,false)
         return Holder(view)
     }
 
+
     override fun getItemCount(): Int {
-
-        return 2
+        return list.size
     }
-
-
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-       holder.ViewPagerIV.setImageResource(com.example.earneasy.R.drawable.referfriend)
+       holder.ViewPagerIV.setImageResource(list[position].offerimage)
+//        holder.ViewPagerIV.text =   list[position].offerimage.toString()
         holder.itemView.setOnClickListener {
-            (ctx as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.MainActivityFragmentView,
+            (ctx as MainActivity).supportFragmentManager.beginTransaction().replace(
+                id.MainActivityFragmentView,
                 ReferEarnFragment()
             ).commit()
-
-
         }
 
-    }
-    interface ItemClickListener{
-        fun onItemClick(view: View,position: Int)
+
     }
 
-    fun setOnClickListener(listener: ItemClickListener){
-        this.itemClickListener = listener
+
+    class Holder(item : View): ViewHolder(item) {
+        val ViewPagerIV = item.findViewById<ImageView>(id.viewpagerreferfriendImageView)
+//        val ViewPagerIV = item.findViewById<TextView>(id.viewpagerreferfriendImageView)
     }
-}
+
+    }
 
 
 
@@ -62,7 +59,35 @@ class ViewPagerAdapter(val ctx: Context) : RecyclerView.Adapter<ViewPagerAdapter
 
 
 
-class ViewPagerPaymentAdapter(fm:FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fm,lifecycle) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class ViewPagerPaymentAdapter(fm:FragmentManager, lifecycle: Lifecycle) :
+    FragmentStateAdapter(fm,lifecycle) {
     var fragments = mutableListOf<Fragment>()
 
     override fun getItemCount(): Int {

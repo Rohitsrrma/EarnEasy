@@ -1,5 +1,6 @@
 package com.example.earneasy.Fragments.MainActivityFragments
 
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.earneasy.AdapterView.HistoryAdapter
 import com.example.earneasy.MainActivity.Companion.setToolBar
 import com.example.earneasy.R
-import com.example.earneasy.TestData.TestData
+import com.example.earneasy.VIewModels.MainActivityViewModel
 import com.example.earneasy.databinding.FragmentHistoryBinding
 
 /**
@@ -43,10 +44,19 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        TestData.addtoHistoryList()
-        val recyclerView = binding.historyAdapter
-        recyclerView.adapter = HistoryAdapter(TestData.historyitemlist)
-        recyclerView.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.VERTICAL, false)
+
+
+        val mainViewModel = MainActivityViewModel((fContext as Activity).application)
+
+        val data = mainViewModel.getHistoryList()
+
+        data.observe(viewLifecycleOwner){
+
+            val recyclerView = binding.historyAdapter
+            recyclerView.adapter = HistoryAdapter(it)
+            recyclerView.layoutManager = LinearLayoutManager(fContext, LinearLayoutManager.VERTICAL, false)
+
+        }
 
 
         setToolBar(1, fContext)

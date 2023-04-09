@@ -3,9 +3,12 @@ package com.example.earneasy
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.earneasy.AdapterView.NotificatonAdapter
+import com.example.earneasy.TestData.NotificationDataModelClass
 import com.example.earneasy.TestData.TestData
+import com.example.earneasy.VIewModels.MainActivityViewModel
 import com.example.earneasy.databinding.ActivityNotificationBinding
 
 class NotificationActivity : AppCompatActivity() {
@@ -14,18 +17,24 @@ class NotificationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         TestData.addtoNotificationList()
         binding = DataBindingUtil.setContentView(this,R.layout.activity_notification)
-        binding.notificationcountTextView.text = TestData.notificationlist.size.toString()
+
         binding.backtoMainfromPayment.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
             finish()
         }
-        setRecycler()
+
+        val viewModel = ViewModelProvider(this)[MainActivityViewModel::class.java]
+        viewModel.getNotificationsList().observe(this){
+            setRecycler(it)
+        }
+
+
     }
 
 
-    fun setRecycler(){
+    private fun setRecycler(it : List<NotificationDataModelClass>){
         val rv = binding.rvNotification
-        rv.adapter = NotificatonAdapter(this,TestData.notificationlist)
+        rv.adapter = NotificatonAdapter(this,it)
         rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 

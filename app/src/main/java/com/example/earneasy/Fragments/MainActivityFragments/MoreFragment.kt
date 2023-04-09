@@ -13,10 +13,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.example.earneasy.GetStartedActivity
-import com.example.earneasy.HowDoesThisWork
-import com.example.earneasy.MainActivity
-import com.example.earneasy.R
+import com.example.earneasy.*
 import com.example.earneasy.databinding.FragmentMoreBinding
 
 
@@ -43,7 +40,7 @@ class MoreFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
 //        binding = FragmentMoreBinding.inflate(inflater,container,false)
 //        val navHostFragment = NavHostFragment()
@@ -66,7 +63,6 @@ class MoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         MainActivity.setToolBar(3, fContext)
-
 
 
         binding.PaymentTabLL.setOnClickListener {
@@ -124,10 +120,6 @@ class MoreFragment : Fragment() {
                 val intent = Intent(fContext,GetStartedActivity::class.java)
                 startActivity(intent)
             }
-
-
-
-
         }
     }
 

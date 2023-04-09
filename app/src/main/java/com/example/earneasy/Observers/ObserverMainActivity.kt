@@ -11,4 +11,22 @@ class ObserverMainActivity : LifecycleObserver {
     fun onCreate(){
         Log.d("MAINs","Observer - ON CREATE")
     }
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    fun onResume(){
+        Log.d("MAINs","Observer - ON Resume")
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    fun onPause(){
+        Log.d("MAINs","Observer - ON Pause")
+    }
+
+
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    fun onDestroy(){
+        Log.d("MAINs","Observer - ON Destroy")
+    }
+
+
 }

@@ -13,7 +13,7 @@ class GetStartedActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_get_started)
 
         binding.continuetext.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,DailyRewardsActivity::class.java)
             startActivity(intent)
 
         }

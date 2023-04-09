@@ -5,6 +5,7 @@
 
     <data>
 
+
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -21,13 +22,15 @@
             android:paddingBottom="10dp">
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/actor"
+                android:text="Refer And Earn"
+                android:textSize="4mm"
                 android:textColor="@color/referbackground"
-                android:text="Refer And Earn" />
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_marginTop="10dp"
@@ -51,21 +54,23 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:padding="10dp"
-                    android:gravity="center"
-                    android:textSize="10sp"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:textColor="@color/referbackground"
-
                     android:layout_height="wrap_content"
-                    android:text="REFER YOUR\nFRIENDS" />
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:padding="10dp"
+
+                    android:text="REFER YOUR\nFRIENDS"
+                    android:textColor="@color/referbackground"
+                    android:textSize="10sp" />
 
                 <TextView
                     android:padding="10dp"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:textAlignment="center"
+
                     android:textSize="10sp"
                     android:layout_gravity="center"
                     android:gravity="center"
@@ -83,8 +88,9 @@
                     android:textColor="@color/referbackground"
                     android:layout_gravity="center"
                     android:gravity="center"
+
                     android:layout_height="match_parent"
-                    android:text="GET ₹15\nINSTANTLY" />
+                    android:text="GET ₹ 15\nINSTANTLY" />
 
 
             </LinearLayout>
@@ -96,7 +102,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:clipToPadding="false"
-                android:elevation="12dp"
+                android:elevation="7dp"
 
                 android:background="@drawable/roundedrectangle"
                 android:layout_height="wrap_content">
@@ -135,12 +141,12 @@
                     android:orientation="horizontal">
 
                     <TextView
+
                         android:paddingLeft="20dp"
                         android:id="@+id/refferal_Code_TV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="nRjcCNfm"
-
                         android:textStyle="bold"
                         android:textColor="@color/referbackground" />
 
@@ -152,18 +158,23 @@
                     <TextView
                         android:id="@+id/Tap_to_Copy_TV"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:onClick="taptocopy"
+                        android:text="Tap to Copy"
                         android:textColor="@color/silvertext"
-                        android:text="Tap to Copy" />
+                        android:textSize="12sp"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <ImageView
                         android:id="@+id/refercode_copy_IV"
                         android:layout_width="30dp"
-                        android:layout_marginRight="20dp"
                         android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="taptocopy"
                         android:src="@drawable/copy"
-                        app:tint="@color/referbackground" />
+                        app:tint="@color/referbackground"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 </LinearLayout>
 
@@ -171,19 +182,23 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:gravity="center"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="15dp"
-                android:textSize="18sp"
-                android:textColor="#272121"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Invite by Social Media" />
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:onClick="taptocopy"
+                android:text="Invite by Social Media"
+                android:textColor="#272121"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
             <LinearLayout
+
+
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -199,19 +214,22 @@
                     android:orientation="vertical">
 
                     <ImageView
-
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/whatsapp" />
+                        android:onClick="whatsapp"
+                        android:src="@drawable/whatsapp"
+                        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                     <TextView
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:maxLines="1"
-                        android:textColor="@color/silvertext"
+                        android:onClick="whatsapp"
+                        android:text="WhatsApp"
 
-                        android:text="WhatsApp" />
+                        android:textColor="@color/silvertext"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -224,12 +242,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-
+                        android:onClick="instagram"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/instagram" />
 
                     <TextView
+                        android:onClick="instagram"
+
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -249,18 +269,18 @@
                     android:orientation="vertical">
 
                     <ImageView
-
+                        android:onClick="telegram"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/telegram" />
 
                     <TextView
+                        android:onClick="telegram"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:textColor="@color/silvertext"
-
                         android:text="Telegram" />
                 </LinearLayout>
 
@@ -271,18 +291,18 @@
                     android:orientation="vertical">
 
                     <ImageView
-
+                        android:onClick="morebutton"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/share" />
 
                     <TextView
+                        android:onClick="morebutton"
                         android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:textColor="@color/silvertext"
-
                         android:text="More" />
                 </LinearLayout>
 

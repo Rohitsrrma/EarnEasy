@@ -5,145 +5,169 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-<!--    <variable-->
-<!--        name="MainActivityViewModel"-->
-<!--        type="com.example.earneasy.VIewModels.MainActivityViewModel" />-->
+        <!--    <variable-->
+        <!--        name="MainActivityViewModel"-->
+        <!--        type="com.example.earneasy.VIewModels.MainActivityViewModel" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:background="@color/fragmentbackground"
-        tools:context=".MainActivity">
+        tools:context=".DailyRewardsActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/AppBarLayout"
-            android:background="@color/referbackground"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="20dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="65dp">
+            android:layout_height="65dp"
+            android:background="@drawable/gradientbackgroud"
+            app:layout_constraintBottom_toTopOf="@+id/MainActivityFragmentView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center"
+
+                <ImageView
+                    android:onClick="dailyrewards"
+                    android:id="@+id/mainactivity_AppBarTitle_ImageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:onClick="dailyrewards"
+                    android:id="@+id/mainactivity_AppBarTitle_TextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    tools:ignore="UseCompoundDrawables">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="Home"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
-                    <ImageView
-                        android:id="@+id/mainactivity_AppBarTitle_ImageView"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/home"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-
-                        android:id="@+id/mainactivity_AppBarTitle_TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:layout_marginLeft="5dp"
-                        android:text="Home" />
-                </LinearLayout>
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center"
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
+
                     android:layout_height="match_parent"
-                    tools:ignore="ExtraText">
+                    android:layout_gravity="center">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_gravity="center"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="20dp"
+                        android:onClick="Notify"
+                        android:src="@drawable/notification"
+                        android:visibility="visible"
 
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <RelativeLayout
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.379"
+                        app:layout_constraintHorizontal_bias="0.4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:onClick="Notify"
-                        android:visibility="visible"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-
-                        android:layout_width="35dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/notification" />
-
-                        <TextView
-                            android:gravity="center"
-                            android:id="@+id/notificationcountTextView"
+                        <View
+                            android:id="@+id/viewmain"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
                             android:background="@drawable/redcircle"
-                            android:text="12"
-                            android:textColor="@color/white"
-                            android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.40"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/notificationcountTextView"
+                            android:layout_width="12dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/advent_pro"
+                            android:layout_alignTop="@+id/viewmain"
+                            android:layout_alignBottom="@id/viewmain"
+                            android:layout_alignStart="@id/viewmain"
+                            android:layout_alignEnd="@id/viewmain"
+                            android:text="23"
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0"
-                            tools:ignore="TextSizeCheck" />
+                            app:layout_constraintVertical_bias="0.408"
+                            tools:ignore="TextSizeCheck,TextContrastCheck" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:text="₹50" />
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:onClick="paymentFrag"
+                    android:text="₹50"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
 
-                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/MainActivityFragmentView"
-            app:layout_constraintStart_toStartOf="parent"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/AppBarLayout"
-            app:layout_constraintBottom_toTopOf="@+id/BottomNavigationMain"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:defaultNavHost="true"
-
-            app:navGraph="@navigation/bottom_nav_graph"/>
+            app:layout_constraintBottom_toTopOf="@+id/BottomNavigationMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AppBarLayout"
+            app:navGraph="@navigation/bottom_nav_graph" />
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
 
             android:id="@+id/BottomNavigationMain"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/roudedupside"
-
-            app:layout_constraintLeft_toLeftOf="parent"
-
             android:layout_width="match_parent"
-            app:labelVisibilityMode="labeled"
-            app:itemRippleColor="@color/purple_500"
-
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradientbackgroudbottomnav"
             app:itemIconTint="@drawable/selectoriconbottomnav"
+            app:itemRippleColor="@color/purple_500"
             app:itemTextColor="@drawable/selectoriconbottomnav"
-            app:menu="@menu/bottom_navigation_menu_item"
-            android:layout_height="wrap_content" />
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:menu="@menu/bottom_navigation_menu_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

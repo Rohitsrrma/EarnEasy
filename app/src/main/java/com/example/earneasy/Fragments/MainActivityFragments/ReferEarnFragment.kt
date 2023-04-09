@@ -73,4 +73,7 @@ class ReferEarnFragment : Fragment() {
                 }
             }
     }
+
+
+
 }
